@@ -12,6 +12,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "TEMCY RUN | Digital HQ",
   description: "Tembalang City Running Collective. Sexy Pace. Gorpcore. Night Run.",
+  icons: {
+    icon: "/temcyrun.png",
+  },
 };
 
 export default function RootLayout({
