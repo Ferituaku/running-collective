@@ -1,26 +1,49 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: #050505;
+  --color-concrete: #121212;
+  --color-steel: #2A2A2A;
+
+  --color-brand: #E60023;
+  --color-brand-dark: #820014;
+  --color-brand-light: #FF4D6A;
+
+  --color-white: #FFFFFF;
+  --color-haze: #888888;
+
+  --font-display: "Clash Display", sans-serif;
+  --font-mono: var(--font-jetbrains-mono);
+
+  --background-image-glow: radial-gradient(circle at center, #820014 0%, transparent 70%);
+  --background-image-noise: url('/textures/noise.png');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: var(--color-void);
+  --foreground: #ededed;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-display);
+  /* Defaulting to display for the vibe, or could use a sans fallback */
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from animations */
+}
+
+/* Utilities for glassmorphism */
+.glass {
+  background: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-steel);
+}
+
+/* Scrollbar hiding for clean look */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
