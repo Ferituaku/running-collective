@@ -26,7 +26,7 @@ const PROJECTS: ProjectItem[] = [
     stat: "PRE-ORDER",
     col: "col-span-12 md:col-span-8",
     row: "row-span-2",
-    image: "/merch/jersey1.png",
+    image: "/merch/jersey3.png",
     href: "#merch" 
   },
   { 
